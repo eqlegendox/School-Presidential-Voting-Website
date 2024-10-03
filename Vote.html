@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="Vote.css">
+</head>
+
+<body>
+
+    <header class="navigationBar">
+        <img class="regentsLogo" src="regents logo new.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Vote.html">Vote</a></li>
+                <li><a href="Statistics.html">Statistics</a></li>
+                <li><a href="News.html">News</a></li>
+            </ul>
+        </nav> 
+        <button class="loginBtn" onclick="location.href='About.html'">About</button>
+    </header>
+
+    <div class="wrapper">
+        <div class="optionsBar">
+            <button type="button" onclick="moveIndicator(this)">Vote Now</button>
+            <button type="button" onclick="moveIndicator(this)">Candidate #1</button>
+            <button type="button" onclick="moveIndicator(this)">Candidate #2</button>
+            <button type="button" onclick="moveIndicator(this)">Candidate #3</button>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <div class="vote-now1">
+        <form action="#">
+            <h2>Your Vote Matters!</h2>
+            <div class="user-details">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Grade</label>
+                </div>
+            </div>
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="vote-now2">
+        <form action="#">
+            <div class="candidate-wrap">
+                <h2>Choose Your Candidate</h2>
+                <div class="vote-choice">
+                    <div class="candidate" id="candidate1">
+                        <div class="area" id="area1"></div>
+                    </div>
+                    <div class="candidate" id="candidate2">
+                        <div class="area" id="area2"></div>
+                    </div>
+                    <div class="candidate" id="candidate3">
+                        <div class="area" id="area3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Vote now">
+            </div>
+        </form>
+    </div>
+
+    <script src="Vote.js"></script>
+</body>
+</html>
